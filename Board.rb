@@ -5,12 +5,14 @@ class Board
   def initialize(noRows, noColumns)
     @noRows = noRows
     @noColumns = noColumns
+    @board = Array.new(@noRows)
 
     for i in 0..(@noRows-1)
-      @board[i] = Array.new(@noColumns) # for each row there are 7 slots vertically
+      # for each row there are 7 slots vertically
+      @board[i] = Array.new(@noColumns)
     end
-    for i in 0..(@noRows-1)
-      for j in 0..(@noColumns-1)
+    for i in 0..(noRows-1)
+      for j in 0..(noColumns-1)
         @board[i][j] = "X"
       end
     end
@@ -22,8 +24,10 @@ class Board
       if (@board[w][column] == "X") then
         @board[w][column] = colour
         break
-      else
-        print "Column is full."
+      elsif (@board[w][column] != "X")
+        next
+      elsif (i == (@noRows-1))
+        printf "Column is full."
       end
     end
   end
@@ -31,14 +35,15 @@ class Board
   def print()
     for i in 0..(@noRows-1)
       for j in 0..(@noColumns-1)
-        print @board[i][j]
-        print " "
+        printf @board[i][j]
+        printf " "
       end
-      puts
+      printf "\n"
     end
+    printf "\n"
   end
 
-  def getWinner()
+  def getWinner(board)
   end
 
 end
