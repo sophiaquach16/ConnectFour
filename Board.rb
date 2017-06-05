@@ -43,7 +43,38 @@ class Board
     printf "\n"
   end
 
-  def getWinner(board)
+  def getWinner()
   end
+
+  def getHorizontalWinner(player)
+    for i in 0..(@noRows-1)
+      for j in 0..(@noColumns-4)
+        if (@board[i][j] == player &&
+            @board[i][j+1] == player &&
+            @board[i][j+2] == player &&
+            @board[i][j+3] == player)
+            puts player + " wins!"
+            break
+        end
+      end
+    end
+  end
+
+  def getVerticalWinner(player)
+    for i in 0..(@noColumns-1)
+      for j in 0..(@noRows-4)
+        if (@board[j][i] == player &&
+            @board[j+1][i] == player &&
+            @board[j+1][i] == player &&
+            @board[j+1][i] == player)
+            puts player + " wins!"
+            break
+        end
+      end
+    end
+  end
+
+  def getDiagonalWinner(player)
+  end   
 
 end
