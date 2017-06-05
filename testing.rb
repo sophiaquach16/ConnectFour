@@ -18,9 +18,7 @@ board.add("B",4)
 board.add("B",4)
 
 board.print
-# board.getLeftDiagonalWinner("A") bad
-# board.getLeftDiagonalWinner("B") good
-
-
-# board.getRightDiagonalWinner("B") bad
-#board.getRightDiagonalWinner("B") good
+#board.getLeftDiagonalWinner("A") 
+#board.getLeftDiagonalWinner("B")
+#board.getRightDiagonalWinner("B")
+#board.getRightDiagonalWinner("B")

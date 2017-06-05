@@ -72,7 +72,7 @@ class Board
 
   def getRightDiagonalWinner(player)
     @winner = "false"
-    for j in 0..(@noRows-1)
+    for j in 0..(@noRows-4)
       if (@winner == "true")
         break
       end
@@ -91,7 +91,7 @@ class Board
 
   def getLeftDiagonalWinner(player)
     @winner = "false"
-    for j in 0..(@noRows-1)
+    for j in 0..(@noRows-4)
       if (@winner == "true")
         break
       end
