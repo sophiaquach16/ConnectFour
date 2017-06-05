@@ -90,6 +90,23 @@ class Board
   end
 
   def getLeftDiagonalWinner(player)
+    @winner = "false"
+    for j in 0..(@noRows-1)
+      if (@winner == "true")
+        break
+      end
+        for i in 0..(@noColumns-4)
+          w = (i - (@noColumns-1)) * (-1)
+          if (@board[j][w] == player &&
+              @board[j+1][w-1] == player &&
+              @board[j+2][w-2] == player &&
+              @board[j+3][w-3] == player)
+              puts player + " wins!"
+              @winner = "true"
+              break
+          end
+        end
+    end
   end
 
   def getWinner(player)
