@@ -8,7 +8,6 @@ class Board
     @board = Array.new(@noRows)
 
     for i in 0..(@noRows-1)
-      # for each row there are 7 slots vertically
       @board[i] = Array.new(@noColumns)
     end
     for i in 0..(noRows-1)
@@ -43,9 +42,6 @@ class Board
     printf "\n"
   end
 
-  def getWinner()
-  end
-
   def getHorizontalWinner(player)
     for i in 0..(@noRows-1)
       for j in 0..(@noColumns-4)
@@ -74,9 +70,6 @@ class Board
     end
   end
 
-  def getLeftDiagonalWinner(player)
-  end
-
   def getRightDiagonalWinner(player)
     @winner = "false"
     for j in 0..(@noRows-1)
@@ -94,6 +87,12 @@ class Board
           end
         end
     end
+  end
+
+  def getLeftDiagonalWinner(player)
+  end
+
+  def getWinner(player)
   end
 
 end
