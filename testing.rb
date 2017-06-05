@@ -18,7 +18,9 @@ board.add("B",4)
 board.add("B",4)
 
 board.print
-#board.getLeftDiagonalWinner("A") 
+#board.getLeftDiagonalWinner("A")
 #board.getLeftDiagonalWinner("B")
 #board.getRightDiagonalWinner("B")
 #board.getRightDiagonalWinner("B")
+
+board.getWinner("B")

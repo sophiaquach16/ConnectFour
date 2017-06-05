@@ -50,7 +50,7 @@ class Board
             @board[i][j+2] == player &&
             @board[i][j+3] == player)
             puts player + " wins!"
-            break
+            exit
         end
       end
     end
@@ -64,7 +64,7 @@ class Board
             @board[j+1][i] == player &&
             @board[j+1][i] == player)
             puts player + " wins!"
-            break
+            exit
         end
       end
     end
@@ -74,7 +74,7 @@ class Board
     @winner = "false"
     for j in 0..(@noRows-4)
       if (@winner == "true")
-        break
+        exit
       end
         for i in 0..(@noColumns-4)
           if (@board[j][i] == player &&
@@ -83,7 +83,7 @@ class Board
               @board[j+3][i+3] == player)
               puts player + " wins!"
               @winner = "true"
-              break
+              exit
           end
         end
     end
@@ -93,7 +93,7 @@ class Board
     @winner = "false"
     for j in 0..(@noRows-4)
       if (@winner == "true")
-        break
+        exit
       end
         for i in 0..(@noColumns-4)
           w = (i - (@noColumns-1)) * (-1)
@@ -103,13 +103,17 @@ class Board
               @board[j+3][w-3] == player)
               puts player + " wins!"
               @winner = "true"
-              break
+              exit
           end
         end
     end
   end
 
   def getWinner(player)
+    getHorizontalWinner(player)
+    getVerticalWinner(player)
+    getRightDiagonalWinner(player)
+    getLeftDiagonalWinner(player)
   end
 
 end
