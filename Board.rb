@@ -49,7 +49,6 @@ class Board
             @board[i][j+1] == player &&
             @board[i][j+2] == player &&
             @board[i][j+3] == player)
-            puts player + " wins!"
             return player
         end
       end
@@ -63,7 +62,6 @@ class Board
             @board[j+1][i] == player &&
             @board[j+2][i] == player &&
             @board[j+3][i] == player)
-            puts player + " wins!"
             return player
         end
       end
@@ -81,7 +79,6 @@ class Board
               @board[j+1][i+1] == player &&
               @board[j+2][i+2] == player &&
               @board[j+3][i+3] == player)
-              puts player + " wins!"
               @winner = "true"
               return player
           end
@@ -101,7 +98,6 @@ class Board
               @board[j+1][w-1] == player &&
               @board[j+2][w-2] == player &&
               @board[j+3][w-3] == player)
-              puts player + " wins!"
               @winner = "true"
               return player
           end
