@@ -106,10 +106,26 @@ class Board
   end
 
   def getWinner(player)
-    getHorizontalWinner(player)
-    getVerticalWinner(player)
-    getRightDiagonalWinner(player)
-    getLeftDiagonalWinner(player)
+    horizontalWin = getHorizontalWinner(player)
+    if (horizontalWin == player)
+      return player
+    end
+
+    verticalWin = getVerticalWinner(player)
+    if (verticalWin == player)
+      return player
+    end
+
+    diagonalRightWin = getRightDiagonalWinner(player)
+    if (diagonalRightWin == player)
+      return player
+    end
+
+    diagonalLeftWin = getLeftDiagonalWinner(player)
+    if (diagonalLeftWin == player)
+      return player
+    end
+
   end
 
 end
