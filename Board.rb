@@ -106,6 +106,7 @@ class Board
   end
 
   def getWinner(player)
+
     horizontalWin = getHorizontalWinner(player)
     if (horizontalWin == player)
       return player
