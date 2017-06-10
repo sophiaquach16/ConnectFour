@@ -129,4 +129,28 @@ class Board
 
   end
 
+
+  def getWinningMove(player)
+
+    for i in 0..(@noColumns-1)
+      add(player,i)
+      if (getWinner(player) == player)
+        for j in 0..(@noRows-1)
+          if (@board[j][i] != "X")
+            @board[j][i] = "X"
+            return i
+          end
+        end
+      else
+        for j in 0..(@noRows-1)
+          if (@board[j][i] != "X")
+            @board[j][i] = "X"
+            break
+          end
+        end
+      end
+    end
+
+  end
+
 end

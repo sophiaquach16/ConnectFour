@@ -76,6 +76,31 @@ end
 
 testVerticalWinner()
 
+def lookForWinningMove()
+  board1 = Board.new(5,5)
+  board1.add("T",0)
+  board1.add("T",1)
+  board1.add("P",1)
+  board1.add("P",2)
+  board1.add("P",2)
+  board1.add("P",2)
+  board1.add("T",3)
+  board1.add("T",3)
+  board1.add("T",3)
+  board1.print
+  winningMove = board1.getWinningMove("T")
+  board1.print
+
+  if (winningMove == 3)
+    puts "Could find winning move.\n"
+  elsif
+    puts "Could not find wining move.\n"
+  end
+end
+
+lookForWinningMove()
+
+
 =begin
 
 board.add("B",1)
