@@ -129,7 +129,6 @@ class Board
 
   end
 
-
   def getWinningMove(player)
 
     for i in 0..(@noColumns-1)
@@ -151,6 +150,12 @@ class Board
       end
     end
 
+  end
+
+  def criticalMove(opponent)
+    if (getWinningMove(opponent) != nil)
+      return getWinningMove(opponent)
+    end
   end
 
 end

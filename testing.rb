@@ -100,6 +100,45 @@ end
 
 lookForWinningMove()
 
+def lookForCriticalMove()
+  board1 = Board.new(5,5)
+  board1.add("T",0)
+  board1.add("T",1)
+  board1.add("P",1)
+  board1.add("P",2)
+  board1.add("P",2)
+  board1.add("T",3)
+  board1.add("T",3)
+  board1.add("T",3)
+  board1.print
+
+  place = board1.criticalMove("T")
+  puts place
+
+end
+
+lookForCriticalMove()
+
+def lookForCriticalMove()
+  board1 = Board.new(5,5)
+  board1.add("T",0)
+  board1.add("T",1)
+  board1.add("P",1)
+  board1.add("P",2)
+  board1.add("P",2)
+  board1.add("T",3)
+  board1.add("T",3)
+  board1.add("W",3)
+  board1.print
+
+  place = board1.criticalMove("T")
+  puts place
+
+end
+
+lookForCriticalMove()
+
+
 
 =begin
 
